@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+          body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #fff; /* White background */
+            color: #333; /* Dark gray text color */
+            font-family: Helvetica, Arial, sans-serif;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Header styles */
+        header {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: 1; /* Ensure the header is above other content */
+            transition: transform 0.3s ease; /* Transition for hiding/showing header */
+        }
+         /* Header menu styles */
+         nav ul {
+            list-style: none;
+            padding: 0;
+            background-color: #fff; /* White background */
+            text-align: left; /* Center-align the menu items */
+            font-size: 18px;
+        }
+
+        nav ul li {
+            display: inline; /* Display the menu items in a row */
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000; /* Black text color */
+            font-weight: bold;
+        }
+        footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 98%;
+    height: 4%;
+    background-color: #fff;
+    color: #333; /* Change text color to dark gray */
+    padding: 20px;
+    display: flex; /* Use flexbox to horizontally align content */
+    align-items: center; /* Vertically align content to the center */
+    justify-content: space-between; /* Add space between icons and text */
+    z-index: 2;
+}
+
+/* Footer icon styles */
+.footer-icons a {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+/* Facebook icon */
+.footer-icons .fa-facebook {
+    color: #1877f2; /* Change to Facebook blue color */
+}
+
+/* Instagram icon */
+.footer-icons .fa-instagram {
+    color: #c13584; /* Change to Instagram pink color */
+}
+
+/* LinkedIn icon */
+.footer-icons .fa-linkedin {
+    color: #0a66c2; /* Change to LinkedIn blue color */
+}
+/* Footer icon styles */
+.footer-icons a {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+    </style>
+    
+</head>
+<body>
+    <div class="menu-button" onclick="toggleMenu()"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="selected-works.html">Selected Works</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <footer>
+        <div class="footer-icons" style="display: inline-block;">
+            <a href="https://www.facebook.com/profile.php?id=100024006336205" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/carolina_perez_mendez/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/carolina-perez-mendez/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p style="color: grey; text-align: left; font-style: italic;">&copy; Made by Carolina Pérez Méndez</p>
+        <p style="color: black; text-align: left;">&copy; 2023 Carolina Pérez Méndez. All rights reserved.</p>
+    
+    </footer>
+</body>
+</html>

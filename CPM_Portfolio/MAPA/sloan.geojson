@@ -1,0 +1,15 @@
+{
+    "type": "Feature",
+    "properties": {
+      "SLOAN": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -71.0830131676029,
+        42.361255442697455
+      ]
+    },
+    "id": 13
+  }
+  

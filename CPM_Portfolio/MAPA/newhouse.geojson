@@ -1,0 +1,15 @@
+{
+    "type": "Feature",
+    "properties": {
+      "New House": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -71.10054428497092,
+        42.355134305340215
+      ]
+    },
+    "id": 4
+  }
+  

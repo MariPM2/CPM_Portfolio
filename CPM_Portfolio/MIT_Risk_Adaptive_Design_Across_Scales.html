@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MIT's Risk Adaptive Design</title>
+    <!-- Include Bootstrap CSS and JavaScript -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #fff; /* White background */
+            color: #333; /* Dark gray text color */
+            font-family: Helvetica, Arial, sans-serif;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Header styles */
+        header {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: 1; /* Ensure the header is above other content */
+            transition: transform 0.3s ease; /* Transition for hiding/showing header */
+        }
+
+        /* Header menu styles */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background-color: #fff; /* White background */
+            text-align: left; /* Center-align the menu items */
+            font-size: 18px;
+        }
+
+        nav ul li {
+            display: inline; /* Display the menu items in a row */
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000; /* Black text color */
+            font-weight: bold;
+        }
+
+        /* CSS to scale the images */
+        .image-item img {
+            width: 1550px; /* Set the desired width */
+            height: auto; /* Auto adjust the height to maintain aspect ratio */
+        }
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #fff; /* White background */
+            color: #333; /* Dark gray text color */
+            font-family: Helvetica, Arial, sans-serif;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            margin: 0; /* Remove default margin */
+        }
+
+        p {
+            margin-bottom: 20px;
+            margin-left: 50px;
+            margin-right: 50px;
+            text-align: justify;
+        }
+
+        ul {
+            list-style: disc;
+            margin-right: 50px;
+            padding-left: 100px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: justify;
+            margin: 20px 50px; /* Add 20px top and bottom margin, and 50px left and right margin */
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: justify;
+            margin: 20px 50px; /* Add 20px top and bottom margin, and 50px left and right margin */
+        }
+
+        /* You can adjust the following styles as needed */
+        .emphasis {
+            font-style: italic;
+        }
+
+        .highlight {
+            background-color: #ffffcc;
+        }
+
+        /* CSS styles for the gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+            gap: 10px; /* Adjust the gap between images as needed */
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border: 1px solid #ddd; /* Add a border around each image */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease; /* Add a smooth transform effect on hover */
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1); /* Zoom in on hover */
+        }
+        .modal-content {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 30000px; /* Adjust the maximum width */
+    max-height: 800px; /* Adjust the maximum height */
+    margin-top: 40%; 
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    overflow: auto; /* Add scrollbars if the content overflows */
+}
+#imageCarousel img {
+    max-width: 100%; /* Set the maximum width of the images to 100% of the modal content */
+    max-height: 400px; /* Adjust the maximum height as needed */
+    margin: 0 auto;}
+    .carousel-inner img {
+    display: block;
+    margin: 0 auto;
+}
+ #preview-box {
+    width: 1500px; /* Adjust the width as needed */
+    height: 600px; /* Adjust the height as needed */
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="menu-button" onclick="toggleMenu()"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="selected-works.html">Selected Works</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>MIT's Risk Adaptive Design</h1>
+    <h2>MIT SUMMER RESEARCH PROGRAM 
+        URBAN RISK LAB
+        SUPERVISED BY DR. MIHO MAZAREEUW AND RESEARCH SCIENTIST LARISA OVALLES
+        (SUMMER 2022)</h2>
+    <p>Puerto Rico is especially vulnerable to severe weather events due to its location and tropical climate. Flooding caused by cyclonic systems and tropical atmospheric phenomena negatively impacts life, infrastructure, and habitats. 
+
+        Risk Profiles communicate hazard risk and aid strategic planning of city design. Although risk profiles have been created for Puerto Rico they do not detail localized needs at the scale of municipalities. In conjunction, identifying and classifying relevant stakeholders is necessary to facilitate future project development in high-risk areas. 
+        
+        The Climate Adaptation and Preparedness Toolkit aims to bridge this knowledge gap by creating flooding risk profiles for two socially vulnerable municipalities, Mayagüez and Humacao, and visualizing information about local stakeholders. The flooding risk profile integrates data about marginalized communities, critical infrastructure, and flooding regions to highlight vulnerability. The flooding risk profile can help local government officials and community members identify which locations may benefit the most from future development and consequently, create action plans. Additionally, the risk profile features historical flooding data which can be used to identify trends and potentially predict the severity of floods. 
+        
+        The vulnerabilities identified in the risk profile in combination with stakeholder data can streamline project development by clarifying what information is most relevant.</p>
+        <div class="RAD-01">
+            <img src="Assets\RAD-01.jpg" alt="Image 5" style="width: 1500px; height: auto;">
+        </div>
+
+        <div class="RAD-03">
+            <img src="Assets\RAD-03.jpg" alt="Image 5" style="width: 1500px; height: auto;">
+        </div>
+        <div class="RAD-04">
+            <img src="Assets\RAD-04.jpg" alt="Image 5" style="width: 1500px; height: auto;">
+        </div>
+        
+        <div style="text-align: center;">
+            <!-- Link to the Puerto Rico Risk Profile section -->
+            <a href="#puerto-rico-risk-profile">Click here to view Puerto Rico Risk Profile</a><br>
+        
+            <!-- Link to the MSRP Research Poster section -->
+            <a href="#msrp-research-poster">Click here to view MSRP Research Poster</a>
+        </div>
+        
+    
+        <!-- Your Puerto Rico Risk Profile content -->
+        
+        <!-- ... (your existing HTML code) ... -->
+        
+        
+       
+        <h1> Stakeholder Mapping </h1>
+        <p> In response to the pressing need for effective climate adaptation and resilience-building within Puerto Rican communities, We have developed a Stakeholder Mapping Tool as part of a broader initiative. This tool is designed to identify and categorize the most relevant community organizations within Puerto Rico, with a specific focus on those involved in climate resilience and emergency response efforts. The tool incorporates geospatial data to visually illustrate the locations of these community organizations across Puerto Rico. This geospatial representation helps stakeholders, including MIT and local authorities, understand where these organizations are situated.</p>
+        <p>This map illustrates the location of the most relevant community organizations in PR. They are categorized by the
+            type of organization: social-economic, educational, environmental, and the combination of these four. This helps
+            determine the type of work they do, which specific communities they attend, and how their work relates to emergency
+            relief and environmental crises. For each organization, the tool provides detailed information regarding its mission, target communities, and specific areas of focus. This information is invaluable for understanding how each organization contributes to emergency relief and environmental crisis management. The idea behind the creation of this map is to visually illustrate the data
+            gathered about nonprofit community organizations to further contact them and collaborate in mitigating the effects
+            of the climate crisis. </p>
+            <p> In summary, the Stakeholder Mapping Tool is a vital component of MIT's efforts to build resilience and preparedness within Puerto Rican communities in the face of climate change. By categorizing and visualizing community organizations, this tool helps foster collaboration, streamline engagement, and enhance the effectiveness of climate resilience initiatives. It is a crucial resource for advancing the Climate Adaptation and Preparedness initiative. </p>
+
+            <div class="RAD-02">
+                <img src="Assets\RAD-02.jpg" alt="Image 5" style="width: 1500px; height: auto;">
+            </div>
+        
+        <div id="preview-box">
+            <iframe src="https://embed.kumu.io/50369923b93f7f28714571e2b906f202#main-map" width="100%" height="100%"
+                frameborder="0"></iframe>
+        </div>
+        
+       
+     <h1 id="puerto-rico-risk-profile">PUERTO RICO FLOOD RISK PROFILE</h1> 
+    <!-- <h1>PUERTO RICO FLOOD RISK PROFILE</h1> -->
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT_PORTAL.png" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT_INTRO.png" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT_INDEX.png" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT_PR FLOODING.png" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT_IDENTIFYING.png" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT_FLOODING TYPES.png" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT_MAYA.png" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT_BARRIOS.png" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_M Census.png" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_M History.png" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT jpg_TYPO.jpg" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT_FLOODING.png" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT_COM. INFRASTR.png" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_M Electrical.png" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_AAA.png" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_M Storm Surge.png" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_Sea Level Rise.png" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_M landslides.png" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_Humacao.png" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_H. Neighborhood.png" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_H Census.png" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_H. History.png" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_topography.png" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_H Flooding.png" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_H vulnerable communities.png" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_H Electric.png" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets/RISK ADAPTIVE DESIGN/LAYOUT 2_H. AAA.png" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_H Storm Surge.png" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_SLR.png" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="Assets\RISK ADAPTIVE DESIGN\LAYOUT 2_H Landslide.png" alt="Image 3">
+        </div>
+        <!-- Add more gallery items as needed -->
+    </div>
+
+    <!-- Bootstrap Carousel Modal -->
+    <div id="carouselModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Carousel content goes here -->
+                        </div>
+                        <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to Open Carousel -->
+<script>
+    $(document).ready(function () {
+        $(".gallery-item img").click(function () {
+            // Get the index of the clicked image within its parent gallery-item
+            var index = $(this).parent().index();
+
+            // Set up the carousel content
+            var carouselContent = "";
+            $(".gallery-item img").each(function (i) {
+                var activeClass = i === index ? "active" : "";
+                carouselContent +=
+                    '<div class="carousel-item ' + activeClass + '"><img src="' + $(this).attr("src") + '"></div>';
+            });
+
+            // Update the carousel with the new content
+            $("#imageCarousel .carousel-inner").html(carouselContent);
+
+            // Manually set the active slide in the carousel
+            $("#imageCarousel").carousel(index); // This line sets the active slide
+
+            // Show the Bootstrap Carousel modal
+            $("#carouselModal").modal("show");
+        });
+    });
+</script>
+
+<h1 id="msrp-research-poster">MSRP RESEARCH POSTER</h1>
+<!-- <h1> MSRP RESEARCH POSTER </h1> -->
+<p> On August 5th of 2022, I had the utmost priviledge of presentine this research in the MSRP Research Symposium.</p>
+
+<div class="MSRP Research Poster">
+    <img src="Assets\RESEARCH POSTER Final-01.jpg" alt="Image 5" style="width: 1500px; height: auto;">
+</div>
+    
+</body>
+</html>

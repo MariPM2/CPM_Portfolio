@@ -1,0 +1,15 @@
+{
+    "type": "Feature",
+    "properties": {
+      "Ashdown": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -71.10108365191545,
+        42.358780252292746
+      ]
+    },
+    "id": 21
+  }
+  

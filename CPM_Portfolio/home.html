@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT Media Lab Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Your existing styles here... */
+
+        /* Two-part layout styles */
+        .two-part-layout {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 1px;
+            
+}
+
+
+
+        .left-part {
+            flex: 35%;
+            padding: 30px;
+            width: 40%;
+          
+        }
+
+        .right-part {
+            flex: 60%;
+            padding: 70px 30px;
+            width: 90%;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+             /* Adjust the number of columns as needed */
+            gap: 20px;
+        }
+
+        .image-item {
+            cursor: pointer;
+            text-align: center; 
+            /* Center-align the content horizontally */
+    margin: 10px;
+     /* Add margin around each image item to separate them */
+            transition: opacity 0.3s ease; 
+            /* Add smooth opacity transition on hover */
+        }
+        .image-item img {
+    max-width: 100%; 
+    /* Ensure images don't exceed their container width */
+    height: auto;
+     /* Automatically adjust the height to maintain aspect ratio */
+    width: 100%;
+     /* Fill the available width within the grid item */
+    /* max-height: 400px;  */
+    /* Limit the maximum height of the images */
+        }
+
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .two-part-layout {
+                flex-direction: column;
+            }
+
+            .right-part {
+                margin-top: 20px; /* Add some space between left and right parts */
+                margin-left: 1px;
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr; /* Single column on smaller screens */
+            }
+        }
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #fff; /* White background */
+            color: #333; /* Dark gray text color */
+            font-family: Helvetica, Arial, sans-serif;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Header styles */
+        header {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: 1; /* Ensure the header is above other content */
+            transition: transform 0.3s ease; /* Transition for hiding/showing header */
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #000; /* Black heading color */
+            text-align: center; /* Center-align the text */
+            transform: scale(1.3); /* Initial scale */
+            transition: transform 0.5s ease; /* Transition with ease effect */
+        }
+
+        h1, h2 {
+            color: #000; /* Black heading color */
+            text-align: center;
+            transform: scale(1.3); /* Initial scale */
+            transition: transform 0.5s ease; /* Transition for scaling */
+        }
+
+        h1.active {
+            transform: scale(1.1); /* Grow the H1 when active */
+        }
+
+        .page p {
+            text-align: justify; /* Justify the text within paragraphs */
+            background-color: #f3f3f3; /* Light grey background */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Header menu styles */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background-color: #fff; /* White background */
+            text-align: left; /* Center-align the menu items */
+            font-size: 18px;
+        }
+
+        nav ul li {
+            display: inline; /* Display the menu items in a row */
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000; /* Black text color */
+            font-weight: bold;
+        }
+
+        .scaled-mit-3d-flood-map {
+            width: 200%; /* Adjust the width as needed (e.g., 50% to make it half the original size) */
+            height: auto; /* Automatically adjust the height to maintain the image's aspect ratio */
+        }
+
+        .scaled-risk-adaptive-design {
+            width: 130%; /* Adjust the width as needed (e.g., 50% to make it half the original size) */
+            height: auto; /* Automatically adjust the height to maintain the image's aspect ratio */
+        }
+
+        footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 98%;
+    height: 4%;
+    background-color: #fff;
+    color: #333; /* Change text color to dark gray */
+    padding: 20px;
+    display: flex; /* Use flexbox to horizontally align content */
+    align-items: center; /* Vertically align content to the center */
+    justify-content: space-between; /* Add space between icons and text */
+}
+
+/* Footer icon styles */
+.footer-icons a {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+/* Facebook icon */
+.footer-icons .fa-facebook {
+    color: #1877f2; /* Change to Facebook blue color */
+}
+
+/* Instagram icon */
+.footer-icons .fa-instagram {
+    color: #c13584; /* Change to Instagram pink color */
+}
+
+/* LinkedIn icon */
+.footer-icons .fa-linkedin {
+    color: #0a66c2; /* Change to LinkedIn blue color */
+}
+
+
+        /* CSS Styling for the gallery */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .image-item img {
+            width: 300px;
+            height: 150px;
+        }
+
+        .image-item:hover {
+            opacity: 0.7;
+        }
+        /* Adjust the size and position of the images in the image grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
+    gap: 2px; /* Adjust the gap between images as needed */
+    justify-content: center; /* Center-align the grid horizontally */
+}
+
+.image-item {
+    cursor: pointer;
+    text-align: center; /* Center-align the content horizontally */
+    margin: 2px; /* Add margin around each image item to separate them */
+}
+
+.image-item img {
+    max-width: 100%; /* Ensure images don't exceed their container width */
+    height: 100%; /* Automatically adjust the height to maintain aspect ratio */
+    width: 100%; /* Fill the available width within the grid item */
+    max-height: 400px; /* Limit the maximum height of the images */
+}
+/* Target the first image item and adjust its height by changing grid-row-end */
+/* .image-item:nth-child(1) {
+    grid-row-end: span 1; This will make the first item span only 1 row
+} */
+/* Target the third image item (Image 3) and adjust its height */
+/* .image-item:nth-child(3) img {
+    height: 200px; Adjust the height as needed */
+/* } */
+/* Target the third image item (Image 3) and adjust its margin-top */
+/* Target the third image item (Image 3) and adjust its margin-top */
+/* Target the third image item with the new class */
+.image-item-third {
+    position: relative; /* Enable relative positioning */
+    top: -46px; /* Adjust the value to move the image upwards */
+    transition: top 0.3s ease; /* Add smooth transition for the movement */
+    /* width: 200px; Adjust the width as needed */
+    height: 310px; /* Automatically adjust the height to maintain aspect ratio */
+}
+.image-item-fifth {
+    position: relative; /* Enable relative positioning */
+    top: -40px; /* Adjust the value to move the image upwards */
+    transition: top 0.3s ease; /* Add smooth transition for the movement */
+    width: 500px; /*Adjust the width as needed*/
+    height: auto px; /*Automatically adjust the height to maintain aspect ratio */
+}
+
+    </style>
+</head>
+<body>
+    <div class="menu-button" onclick="toggleMenu()"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="selected-works.html">Selected Works</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <footer>
+        <div class="footer-icons" style="display: inline-block;">
+            <a href="https://www.facebook.com/profile.php?id=100024006336205" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/carolina_perez_mendez/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/carolina-perez-mendez/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p style="color: grey; text-align: left; font-style: italic;">This website was completely programed from scratch by Carolina Pérez Méndez</p>
+        <p style="color: black; text-align: left;">&copy; 2023 Carolina Pérez Méndez. All rights reserved.</p>
+    
+    </footer>
+    
+    <div class="two-part-layout">
+        <section id="home" class="page active left-part">
+            <h1>Welcome to my Portfolio</h1>
+            <p>This portfolio is a curated selection of my most significant works and research experiences, meticulously crafted to showcase my readiness and passion for pursuing a graduate degree in an interdisciplinary field. Drawing from a diverse range of projects and research endeavors, it offers a comprehensive view of my journey and areas of expertise. This portfolio represents my background in environmental design and is tailored for my application to MIT's Media Lab. It showcases a selection of my architectural works, research experiences, and other relevant accomplishments, highlighting my readiness for graduate studies in this innovative field.</p>
+            <p>It includes: 
+                <ul>
+                    <li>Architectural Works: My architectural projects prioritize sustainability and resilience, incorporating features to withstand natural disasters.</li>
+                    <li>Sustainability: My designs emphasize sustainability through energy-efficient practices, renewable materials, and green technologies.</li>
+                    <li>Research Experience: I have conducted research on climate change adaptation, disaster-resilient architecture, and sustainable urban planning.</li>
+                    <li>Natural Disasters: I've studied the impact of natural disasters on the built environment and developed strategies for minimizing risks.</li>
+                    <li>Visual Communications: Proficient in visually communicating complex design concepts through various media.</li>
+                </ul>
+            </p>
+        </section>
+
+        <section id="image-gallery" class="page right-part">
+            <h2></h2>
+            <div class="image-grid">
+                <a href="MIT_3D_Flood_Map.html">
+                    <div class="image-item">
+                        <img src="Assets\Flood_map_pic4.png" alt="Image 1">
+                    </div>
+                </a>
+                <a href="MIT_Risk_Adaptive_Design_Across_Scales.html">
+                    <div class="image-item">
+                        <img src="Assets\vulnerabilitymap.png" alt="Image 2">
+                    </div>
+                </a>
+                <a href="MIT_3D_Flood_Map.html">
+                    <div class="image-item image-item-third">
+                        <img src="Assets\JCM.png" alt="Image 3">
+                    </div>
+                </a>
+                <a href="Post-Disaster-Recovery-Unit.html">
+                    <div class="image-item">
+                        <img src="Assets\ISO.png" alt="Image 4">
+                    </div>
+                </a>
+                <a href="MIT_3D_Flood_Map.html">
+                    <div class="image-item image-item-fifth">
+                        <img src="Assets\maqueta.png" alt="Image 5">
+                    </div>
+                </a>
+    </div>
+
+    <!-- Rest of your code... -->
+    <script>
+        // Function to reveal the text content when the page loads
+        function revealText() {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach((page, index) => {
+                setTimeout(() => {
+                    page.classList.add('active');
+                    if (index === 0) {
+                        document.querySelector('h1').classList.add('active');
+                    }
+                }, index * 500); // Delay each page reveal by 500ms
+            });
+        }
+    
+        // Call the revealText function when the page loads
+        window.addEventListener('load', revealText);
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            font-family: Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+            margin: 0;
+            text-align: center;
+            font-style: normal;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        /* Header menu styles */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background-color: #000;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 1px;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Styles for the button container at the bottom of the page */
+        .button-container {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        .button-container button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: 2px solid #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-button" onclick="toggleMenu()"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="selected-works.html">Selected Works</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-Information">
+            <h2>Contact Information</h2>
+            <address>
+                <!-- Your contact information here -->
+                <p><strong>Carolina Pérez Méndez</strong></p>
+                <p>Phone: 787 206 3031</p>
+                <p>Institutional email: carolina.perez7@upr.edu</p>
+                <p>Personal email: carolinapm354@gmail.com</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/carolina-perez-mendez/" target="_blank">LinkedIn Profile</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/carolina_perez_mendez/" target="_blank">Instagram Profile</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/profile.php?id=100024006336205" target="_blank">Facebook Profile</a></p>
+
+            </address>
+        </section>
+    </main>
+
+    <!-- Button container at the bottom of the page -->
+    <div class="button-container">
+        <button onclick="toggleCV()">Show CV</button>
+    </div>
+    
+    <!-- Initially, hide the iframe, and set an ID for easy access -->
+    <iframe id="cv-iframe" src="Assets\Pérez_Carolina_Resume (2).pdf" width="100%" height="0"></iframe>
+
+    <!-- Footer with CV -->
+    <footer>
+        <!-- <h2>Curriculum Vitae</h2> -->
+        <iframe src="Assets\Pérez_Carolina_Resume (2).pdf" width="100%" height="0"></iframe>
+    </footer>
+
+    <script>
+        let cvVisible = false;
+        const cvIframe = document.getElementById("cv-iframe");
+        const cvButton = document.querySelector("button");
+
+        function toggleCV() {
+            if (cvVisible) {
+                cvIframe.style.height = "0";
+                cvButton.textContent = "Show CV";
+            } else {
+                cvIframe.style.height = "600px"; // Adjust the height as needed for the preview
+                cvButton.textContent = "Hide CV";
+            }
+            cvVisible = !cvVisible;
+        }
+    </script>
+</body>
+</html>

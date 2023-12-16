@@ -1,0 +1,14 @@
+{
+    "type": "Feature",
+    "properties": {
+      "Maseeh": ""
+    },
+    "geometry": {
+      "coordinates": [
+        -71.09351331505746,
+        42.35775291984936
+      ],
+      "type": "Point"
+    },
+    "id": 21
+  }

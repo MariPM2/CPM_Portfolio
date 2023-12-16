@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+        <title>Selected Works</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+              body {
+                font-family: Helvetica, Arial, sans-serif;
+                background-color: #fff; /* White background */
+                color: #333; /* Dark gray text color */
+                font-family: Helvetica, Arial, sans-serif;
+                overflow-x: hidden; /* Hide horizontal scrollbar */
+                margin: 0; /* Remove default margin */
+            }
+    
+            /* Header styles */
+            header {
+                background-color: #fff;
+                color: #333;
+                padding: 20px;
+                font-family: Helvetica, Arial, sans-serif;
+                text-align: center;
+                top: 0;
+                width: 100%;
+                z-index: 1; /* Ensure the header is above other content */
+                transition: transform 0.3s ease; /* Transition for hiding/showing header */
+            }
+             /* Header menu styles */
+             nav ul {
+                list-style: none;
+                padding: 0;
+                background-color: #fff; /* White background */
+                text-align: left; /* Center-align the menu items */
+                font-size: 18px;
+            }
+    
+            nav ul li {
+                display: inline; /* Display the menu items in a row */
+                margin-right: 20px;
+            }
+    
+            nav ul li a {
+                text-decoration: none;
+                color: #000; /* Black text color */
+                font-weight: bold;
+            }
+            
+        
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            opacity: 1;
+            transition: opacity 0.3s;
+            cursor: pointer;
+        }
+
+        img:hover {
+            opacity: 0.8;
+        }
+
+        /* Style for navigation dots */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Style for the row of images */
+        .image-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image-row img {
+            width: 120px;
+            height: auto;
+            margin: 5px;
+            cursor: pointer;
+        }
+        footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 98%;
+    height: 4%;
+    background-color: #fff;
+    color: #333; /* Change text color to dark gray */
+    padding: 20px;
+    display: flex; /* Use flexbox to horizontally align content */
+    align-items: center; /* Vertically align content to the center */
+    justify-content: space-between; /* Add space between icons and text */
+    z-index: 2;
+}
+
+/* Footer icon styles */
+.footer-icons a {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+/* Facebook icon */
+.footer-icons .fa-facebook {
+    color: #1877f2; /* Change to Facebook blue color */
+}
+
+/* Instagram icon */
+.footer-icons .fa-instagram {
+    color: #c13584; /* Change to Instagram pink color */
+}
+
+/* LinkedIn icon */
+.footer-icons .fa-linkedin {
+    color: #0a66c2; /* Change to LinkedIn blue color */
+}
+/* Footer icon styles */
+.footer-icons a {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="menu-button" onclick="toggleMenu()"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="selected-works.html">Selected Works</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <footer>
+        <div class="footer-icons" style="display: inline-block;">
+            <a href="https://www.facebook.com/profile.php?id=100024006336205" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/carolina_perez_mendez/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/carolina-perez-mendez/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p style="color: grey; text-align: left; font-style: italic;">&copy; Made by Carolina Pérez Méndez</p>
+        <p style="color: black; text-align: left;">&copy; 2023 Carolina Pérez Méndez. All rights reserved.</p>
+    
+    </footer>
+    <!-- <h1>Clickable Sliding Gallery with Hover Effect</h1> -->
+
+    <div class="slideshow-container">
+        <a href="MIT_3D_Flood_Map.html">
+            <div class="mySlides">
+                <img src="Assets\Flood_map_pic4.png" alt="Image 1">
+            </div>
+        </a>
+        <a href="MIT_Risk_Adaptive_Design_Across_Scales.html">
+            <div class="mySlides">
+                <img src="Assets\vulnerabilitymap.png" alt="Image 2">
+            </div>
+        </a>
+        <a href="Post-Disaster-Recovery-Unit.html">
+            <div class="mySlides">
+                <img src="Assets\ISO.jpg" alt="Image 3">
+            </div>
+        </a>
+        <a href="JCM.html">
+            <div class="mySlides">
+                <img src="Assets\JCM.png" alt="Image 4">
+            </div>
+        </a>
+        <a href="cuido.html">
+            <div class="mySlides">
+                <img src="Assets\Cuido.png" alt="Image 5">
+            </div>
+        </a>
+        <a href="Hotel.html">
+            <div class="mySlides">
+                <img src="Assets\AFUERA3 - CopyBW.png" alt="Image 6">
+            </div>
+        </a>
+        <a href="Tesina.html">
+            <div class="mySlides">
+                <img src="Assets\hidro.png" alt="Image 7">
+            </div>
+        </a>
+        <a href="Additional_works.html">
+            <div class="mySlides">
+                <img src="Assets\Additional.jpg" alt="Image 8">
+            </div>
+        </a>
+
+        <!-- Navigation dots -->
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- Row of images -->
+    <div class="image-row">
+        <img src="Assets\Flood_map_pic4.png" alt="Image 1" onclick="showImage(0)">
+        <img src="Assets\vulnerabilitymap.png" alt="Image 2" onclick="showImage(1)">
+        <img src="Assets\ISO.jpg" alt="Image 3" onclick="showImage(2)">
+        <img src="Assets\JCM.png" alt="Image 4" onclick="showImage(3)">
+        <img src="Assets\Cuido.png" alt="Image 1" onclick="showImage(4)">
+        <img src="Assets\AFUERA3 - CopyBW.png" alt="Image 2" onclick="showImage(5)">
+        <img src="Assets\hidro.png" alt="Image 3" onclick="showImage(6)">
+        <img src="Assets\Additional.jpg" alt="Image 4" onclick="showImage(7)">
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("mySlides");
+            const dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            slides[slideIndex].style.display = "block";
+            dots[slideIndex].className += " active";
+        }
+
+        function showImage(n) {
+            slideIndex = n;
+            showSlides();
+        }
+    </script>
+</body>
+</html>
+
+
+

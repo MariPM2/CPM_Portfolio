@@ -1,0 +1,15 @@
+{
+    "type": "Feature",
+    "properties": {
+      "Building 10": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -71.09199599950075,
+        42.359681672305385
+      ]
+    },
+    "id": 8
+  }
+  

@@ -1,0 +1,15 @@
+{
+    "type": "Feature",
+    "properties": {
+      "McCormick": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -71.09451132044585,
+        42.357327760090016
+      ]
+    },
+    "id": 20
+  }
+  

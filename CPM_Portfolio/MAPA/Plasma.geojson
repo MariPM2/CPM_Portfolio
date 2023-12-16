@@ -1,0 +1,14 @@
+{
+  "type": "Feature",
+  "properties": {
+    "Plasma": ""
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -71.09891230738396,
+      42.35973451063961
+    ]
+  },
+  "id": 21
+}

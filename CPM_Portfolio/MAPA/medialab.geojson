@@ -1,0 +1,15 @@
+{
+    "type": "Feature",
+    "properties": {
+      "Media lab": ""
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -71.08759476406895,
+        42.360760676123334
+      ]
+    },
+    "id": 12
+  }
+  
